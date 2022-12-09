@@ -1,0 +1,46 @@
+:root {
+    --light: #FFFFFF;
+    --dark:  #292929;
+}
+
+/* reset */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nav section */
+header {
+    background-color: var(--dark);
+    display: flex;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+  }
+
+nav {
+    background: var(--dark);
+    height: 70px;
+    padding: 20px;
+}
+
+.logo {
+    color: var(--light);
+    border: 1px solid var(--light);
+    padding: 5px 5px;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: pointer;
+}
+/* mobile view */
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+}
