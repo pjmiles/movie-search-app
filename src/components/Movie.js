@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const movie = () => {
+const Movie = () => {
   const [movie, setMovie] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -34,18 +34,20 @@ const movie = () => {
   }, [searchText]);
 
   return (
-    <div className="movie-container">
+    <>
       <div className="search-container">
         <h1>Search</h1>
         <input type="text" onChange={handleSearch} value={searchText} />
         <p>{movie.Error}</p>
       </div>
       <div className="movie-result">
-        <img src={movie.Poster} alt="movie-picture" className="movie-pics" />
-        <h2>{movie.Title}</h2>
+        <div className="image-rapper">
+          <img src={movie.Poster} alt="movie-picture" className="movie-pics" />
+          <h2>{movie.Title}</h2>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default movie;
+export default Movie;
