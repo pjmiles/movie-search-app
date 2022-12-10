@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
-import Movies from "./components/Movies";
+import Movie from "./components/Movie";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <main className="App">
       <NavBar />
       <Hero />
-      <Movies />
+      <Movie />
     </main>
   );
 }

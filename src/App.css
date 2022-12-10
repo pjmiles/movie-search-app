@@ -80,10 +80,18 @@ nav {
 }
 
 /* result */
-.movie-result img {
-  width: 300px;
-  height: 300px;
+.movie-result {
+  border: 1px solid var(--dark);
+  border-radius: 10px;
+  max-width: 800px;
+  /* max-width: 550px; */
 }
+
+/* .movie-result img {
+  width: 60%;
+  height: auto;
+  margin-left: 20px;
+} */
 
 /* mobile view */
 @media screen and (max-width: 768px) {
