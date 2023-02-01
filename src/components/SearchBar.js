@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ setMovie, setErrMsg, setIsLoading }) => {
   const [searchText, setSearchText] = useState("");
 
   const handleSearch = (e) => {
@@ -9,11 +9,11 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    setIsLoading(true);
+    // setIsLoading(true);
     const movieData = async () => {
       try {
         const { data } = await axios.get(
-          `https://www.omdbapi.com/?t=${searchText}&?i=tt3896198&apikey=c9c5de57`
+          `https://www.omdbapi.com/?s=${searchText}&?i=tt3896198&apikey=c9c5de57`
         );
         if (data?.Response === "True") {
           setErrMsg("");
