@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 
 const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
-  
+
   const handleSearch = (e) => {
     setSearchText(e.target.value);
   };
 
   useEffect(() => {
     setIsLoading(true);
-    const movieList = async () => {
+    const movieData = async () => {
       try {
         const { data } = await axios.get(
           `https://www.omdbapi.com/?t=${searchText}&?i=tt3896198&apikey=c9c5de57`
@@ -31,7 +31,7 @@ const SearchBar = () => {
 
     if (searchText) {
       const timeOutId = setTimeout(() => {
-        movieList();
+        movieData();
       }, 1000);
       return () => {
         clearTimeout(timeOutId);
