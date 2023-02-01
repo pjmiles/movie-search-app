@@ -1,12 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const Movie = () => {
-  const [movie, setMovie] = useState([]);
+const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
-  const [errMsg, setErrMsg] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
+  
   const handleSearch = (e) => {
     setSearchText(e.target.value);
   };
@@ -43,26 +40,11 @@ const Movie = () => {
   }, [searchText]);
 
   return (
-    <>
-      <div className="search-container">
-        <h1>Search</h1>
-        <input type="text" onChange={handleSearch} value={searchText} />
-        {/* <p>{movie.Error}</p> */}
-      </div>
-      <div className="movie-result">
-        <div className="image-rapper">
-            <>
-              <img
-                src={movie.Poster}
-                alt="movie-picture"
-                className="movie-pics"
-              />
-            </>
-          <h2>{movie.Title}</h2>
-        </div>
-      </div>
-    </>
+    <div className="search-container">
+      <h1>Search</h1>
+      <input type="text" onChange={handleSearch} value={searchText} />
+    </div>
   );
 };
 
-export default Movie;
+export default SearchBar;
