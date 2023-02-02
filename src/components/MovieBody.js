@@ -11,7 +11,7 @@ const MovieBody = ({ movie, isLoading, errMsg }) => {
             <div className="movie-result">
               {movie?.map((item) => {
                 return (
-                  <div>
+                  <div className="movie-title">
                     <h1>{item?.Title}</h1>
                   </div>
                 );
