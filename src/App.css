@@ -92,21 +92,39 @@ nav {
 /* result */
 .movie-result {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 20px auto;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 20px 20px;
-  /* max-width: 550px; */
+  background: var(--dark);
+  margin-top: 20px;
 }
 
-.movie-result img {
-  width: 300px;
-  height: 300px;
-}
-
-.movie-result h2 {
+.movie-title{
   text-align: center;
-  margin-top: -50%;
   color: var(--light);
+  
+  border-radius: 12px;
+}
+
+.movie-title img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--light);
+  border-radius: 12px;
+}
+
+.movie-title p {
+  font-size: 16px;
+  color: var(--light);
+}
+
+/* error message */
+.error-message{
+  text-align: center;
+  color: #d62c2c;
+  margin-top: 10px;
 }
 
 /* mobile view */
