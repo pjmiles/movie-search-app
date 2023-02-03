@@ -92,25 +92,31 @@ nav {
 /* result */
 .movie-result {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 20px auto;
   padding: 20px 20px;
+  background: var(--dark);
+  margin-top: 20px;
 }
 
 .movie-title{
-  border: 1px solid var(--dark);
-  border-radius: 5px;
-  background: var(--dark);
-  width: 200px;
-  height: 200px;
-  justify-content: center;
+  text-align: center;
+  color: var(--light);
+  
+  border-radius: 12px;
 }
 
-.movie-title h1 {
+.movie-title img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--light);
+  border-radius: 12px;
+}
+
+.movie-title p {
   font-size: 16px;
-  text-align: center;
   color: var(--light);
 }
 

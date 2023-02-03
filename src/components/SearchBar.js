@@ -9,7 +9,7 @@ const SearchBar = ({ setMovie, setErrMsg, setIsLoading }) => {
   };
 
   useEffect(() => {
-    // setIsLoading(true);
+    setIsLoading(true);
     const movieData = async () => {
       try {
         const { data } = await axios.get(
@@ -36,6 +36,8 @@ const SearchBar = ({ setMovie, setErrMsg, setIsLoading }) => {
       return () => {
         clearTimeout(timeOutId);
       };
+    } else if (searchText === "") {
+      setIsLoading(false);
     }
   }, [searchText]);
 

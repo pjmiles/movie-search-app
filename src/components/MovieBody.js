@@ -2,7 +2,7 @@ const MovieBody = ({ movie, isLoading, errMsg }) => {
   return (
     <>
       {isLoading ? (
-        "Loading..."
+        <p>Loading...</p>
       ) : (
         <>
           {errMsg ? (
@@ -12,7 +12,8 @@ const MovieBody = ({ movie, isLoading, errMsg }) => {
               {movie?.map((item) => {
                 return (
                   <div className="movie-title">
-                    <h1>{item?.Title}</h1>
+                    <img src={item?.Poster} alt="movie-image" />
+                    <p>{item?.Title}</p>
                   </div>
                 );
               })}
