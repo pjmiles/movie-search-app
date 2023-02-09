@@ -1,6 +1,7 @@
 :root {
     --light: #FFFFFF;
     --dark:  #292929;
+    --message: #d62c2c;
 }
 
 /* reset */
@@ -83,7 +84,7 @@ nav {
 }
 
 .search-container p {
-  color: #d62c2c;
+  color: var(--message);
   text-align: center;
   font-size: 20px;
   margin-top: 10px;
@@ -97,14 +98,12 @@ nav {
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px 20px;
-  background: var(--dark);
   margin-top: 20px;
 }
 
 .movie-title{
   text-align: center;
-  color: var(--light);
-  
+  color: var(--light); 
   border-radius: 12px;
 }
 
@@ -118,6 +117,12 @@ nav {
 .movie-title p {
   font-size: 16px;
   color: var(--light);
+}
+
+/* clip loader */
+.clip-loader {
+  text-align: center;
+  margin: 15px 0 0 0;
 }
 
 /* error message */

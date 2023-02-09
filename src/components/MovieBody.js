@@ -1,8 +1,12 @@
+import ClipLoader from "react-spinners/ClipLoader";
+
 const MovieBody = ({ movie, isLoading, errMsg }) => {
   return (
     <>
       {isLoading ? (
-        <p>Loading...</p>
+        <div className="clip-loader">
+          <ClipLoader isLoading={isLoading} size={50} />
+        </div>
       ) : (
         <>
           {errMsg ? (
